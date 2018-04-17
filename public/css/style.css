@@ -152,11 +152,17 @@ body {
   .btn--white::after {
     background-color: #fff; }
 
-.btn--green {
+.btn--purple {
   background-color: #d11aff;
   color: #fff; }
-  .btn--green::after {
+  .btn--purple::after {
     background-color: #d11aff; }
+
+.btn--green {
+  background-color: #28b485;
+  color: #fff; }
+  .btn--green::after {
+    background-color: #28b485; }
 
 .btn-text:link, .btn-text:visited {
   font-size: 1.8rem;
@@ -208,7 +214,21 @@ body {
   perspective: 100rem;
   -moz-perspective: 150rem;
   position: relative;
-  height: 60rem; }
+  height: 50rem; }
+  .card__positive {
+    transform: scale(1.05) translateY(-0.1rem);
+    box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5); }
+  .card__negative {
+    transform: scale(1.05) translateY(-0.1rem) rotate(180deg) rotateY(-180deg);
+    box-shadow: 0 1rem 1rem 1rem rgba(0, 0, 0, 0.5); }
+  .card__border__0 {
+    outline: 1rem solid #8f00b3; }
+  .card__border__1 {
+    outline: 1rem solid #ff7730; }
+  .card__border__2 {
+    outline: 1rem solid #00b8e6; }
+  .card__border__3 {
+    outline: 1rem solid #28b485; }
   .card__side {
     font-size: 2rem;
     height: 50rem;

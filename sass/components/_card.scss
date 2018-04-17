@@ -3,8 +3,30 @@
     perspective: 100rem;
     -moz-perspective: 150rem;
     position: relative;
-    height: 60rem;
+    height: 50rem;
 
+    &__positive {
+        transform: scale(1.05) translateY(-.1rem);
+        box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
+    }
+    &__negative {
+        transform: scale(1.05) translateY(-.1rem) rotate(180deg) rotateY(-180deg);
+        box-shadow: 0 1rem 1rem  1rem rgba($color-black, .5);
+    }
+    &__border__0 {
+        outline: 1rem solid $color-primary-dark;
+    }
+    &__border__1 {
+        outline: 1rem solid $color-secondary-dark;
+    }
+    &__border__2 {
+        outline: 1rem solid $color-tertiary-dark;
+    }
+    &__border__3 {
+        outline: 1rem solid $color-four-dark;
+    }
+    &__none {
+    }
     &__side {
         font-size: 2rem;
 

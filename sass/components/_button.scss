@@ -48,12 +48,20 @@
         }
     }
 
-    &--green{
+    &--purple{
         background-color: $color-primary;
         color: $color-white;
 
         &::after {
           background-color: $color-primary;
+        }
+    }
+    &--green{
+        background-color: $color-four-dark;
+        color: $color-white;
+
+        &::after {
+          background-color: $color-four-dark;
         }
     }
 }
