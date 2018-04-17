@@ -1,0 +1,774 @@
+.card {
+    //functionality
+    perspective: 100rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    height: 60rem;
+
+    &__side {
+        font-size: 2rem;
+
+        height: 50rem;
+        transition: all .8s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+
+        &--front {
+            background-color: $color-white;
+        }
+
+        &--back {
+            transform: rotateY(180deg);
+            &-1 {
+                background-image: linear-gradient(to right bottom,
+                    $color-primary-light, $color-primary-dark);
+            }
+            &-2 {
+                background-image: linear-gradient(to right bottom,
+                    $color-secondary-light, $color-secondary-dark);
+            }
+            &-3 {
+                background-image: linear-gradient(to right bottom,
+                    $color-tertiary-light, $color-tertiary-dark);
+            }
+            &-4 {
+                background-image: linear-gradient(to right bottom,
+                    $color-four-light, $color-four-dark);
+            }
+        }
+    }
+
+    &:hover &__side--front {
+        transform: rotateY(-180deg);
+    }
+
+    &:hover &__side--back {
+        transform: rotateY(0);
+    }
+
+    // FRONT SIDE STYLING
+    &__picture {
+        background-size: cover;
+        height : 50rem;
+        background-blend-mode: screen;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);//apply for all browers
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        &--Fool {
+            background-image: linear-gradient(to right bottom,
+                $color-primary-light, $color-primary-dark),
+                url('/assets/img/Fool.jpg');
+            &--back {
+                background-image: url('/assets/img/Fool.jpg');
+            }
+        }
+        &--Magician {
+            background-image: linear-gradient(to right bottom,
+                $color-four-light, $color-secondary-dark),
+                url('/assets/img/Magician.jpg');
+            &--back {
+                background-image: url('/assets/img/Magician.jpg');
+            }
+        }
+        &--Priestess {
+            background-image: linear-gradient(to right bottom,
+                $color-four-light, $color-tertiary-dark),
+                url('/assets/img/Priestess.jpg');
+            &--back {
+                background-image: url('/assets/img/Priestess.jpg');
+            }
+        }
+        &--Empress {
+            background-image: linear-gradient(to right bottom,
+                $color-four-light, $color-four-dark),
+                url('/assets/img/Empress.jpg');
+            &--back {
+                background-image: url('/assets/img/Empress.jpg');
+            }
+        }
+        &--Emperor {
+            background-image: linear-gradient(to right bottom,
+                $color-primary-light, $color-primary-dark),
+                url('/assets/img/Emperor.jpg');
+            &--back {
+                background-image: url('/assets/img/Emperor.jpg');
+            }
+        }
+        &--Hierophant {
+            background-image: linear-gradient(to right bottom,
+                $color-secondary-light, $color-secondary-dark),
+                url('/assets/img/Hierophant.jpg');
+            &--back {
+                background-image: url('/assets/img/Hierophant.jpg');
+            }
+        }
+        &--Lovers {
+            background-image: linear-gradient(to right bottom,
+                $color-tertiary-light, $color-tertiary-dark),
+                url('/assets/img/Lovers.jpg');
+            &--back {
+                background-image: url('/assets/img/Lovers.jpg');
+            }
+        }
+        &--Chariot {
+            background-image: linear-gradient(to right bottom,
+                $color-four-light, $color-four-dark),
+                url('/assets/img/Chariot.jpg');
+            &--back {
+                background-image: url('/assets/img/Chariot.jpg');
+            }
+        }
+        &--Strength {
+            background-image: linear-gradient(to right bottom,
+                $color-primary-light, $color-primary-dark),
+                url('/assets/img/Strength.jpg');
+            &--back {
+                background-image: url('/assets/img/Strength.jpg');
+            }
+        }
+        &--Hermit {
+            background-image: linear-gradient(to right bottom,
+                $color-secondary-light, $color-secondary-dark),
+                url('/assets/img/Hermit.jpg');
+            &--back {
+                background-image: url('/assets/img/Hermit.jpg');
+            }
+        }
+        &--Wheel_of_Fortune {
+            background-image: linear-gradient(to right bottom,
+                $color-tertiary-light, $color-tertiary-dark),
+                url('/assets/img/Wheel_of_Fortune.jpg');
+            &--back {
+                background-image: url('/assets/img/Wheel_of_Fortune.jpg');
+            }
+        }
+        &--Justice{
+            background-image: linear-gradient(to right bottom,
+                $color-four-light, $color-four-dark),
+                url('/assets/img/Justice.jpg');
+            &--back {
+                background-image: url('/assets/img/Justice.jpg');
+            }
+        }
+        &--HangedMan {
+            background-image: linear-gradient(to right bottom,
+                $color-primary-light, $color-primary-dark),
+                url('/assets/img/HangedMan.jpg');
+            &--back {
+                background-image: url('/assets/img/HangedMan.jpg');
+            }
+        }
+        &--Death {
+            background-image: linear-gradient(to right bottom,
+                $color-secondary-light, $color-secondary-dark),
+                url('/assets/img/Death.jpg');
+            &--back {
+                background-image: url('/assets/img/Death.jpg');
+            }
+        }
+        &--Temperance {
+            background-image: linear-gradient(to right bottom,
+                $color-tertiary-light, $color-tertiary-dark),
+                url('/assets/img/Temperance.jpg');
+            &--back {
+                background-image: url('/assets/img/Temperance.jpg');
+            }
+        }
+        &--Devil{
+            background-image: linear-gradient(to right bottom,
+                $color-four-light, $color-four-dark),
+                url('/assets/img/Devil.jpg');
+            &--back {
+                background-image: url('/assets/img/Devil.jpg');
+            }
+        }
+        &--Tower {
+            background-image: linear-gradient(to right bottom,
+                $color-primary-light, $color-primary-dark),
+                url('/assets/img/Tower.jpg');
+            &--back {
+                background-image: url('/assets/img/Tower.jpg');
+            }
+        }
+        &--Star {
+            background-image: linear-gradient(to right bottom,
+                $color-secondary-light, $color-secondary-dark),
+                url('/assets/img/Star.jpg');
+            &--back {
+                background-image: url('/assets/img/Star.jpg');
+            }
+        }
+        &--Moon {
+            background-image: linear-gradient(to right bottom,
+                $color-tertiary-light, $color-tertiary-dark),
+                url('/assets/img/Moon.jpg');
+            &--back {
+                background-image: url('/assets/img/Moon.jpg');
+            }
+        }
+        &--Sun{
+            background-image: linear-gradient(to right bottom,
+                $color-four-light, $color-four-dark),
+                url('/assets/img/Sun.jpg');
+            &--back {
+                background-image: url('/assets/img/Sun.jpg');
+            }
+        }
+        &--Judgement {
+            background-image: linear-gradient(to right bottom,
+                $color-primary-light, $color-primary-dark),
+                url('/assets/img/Judgement.jpg');
+            &--back {
+                background-image: url('/assets/img/Judgement.jpg');
+            }
+        }
+        &--World {
+            background-image: linear-gradient(to right bottom,
+                $color-secondary-light, $color-secondary-dark),
+                url('/assets/img/World.jpg');
+            &--back {
+                background-image: url('/assets/img/World.jpg');
+            }
+        }
+        &--AceWands {
+            background-image: linear-gradient(to right bottom,
+                $color-primary-light, $color-primary-dark),
+                url('/assets/img/Wands/1.jpg');
+            &--back {
+                background-image: url('/assets/img/Wands/1.jpg');
+            }
+        }
+        &--2Wands {
+            background-image: linear-gradient(to right bottom,
+                $color-secondary-light, $color-secondary-dark),
+                url('/assets/img/Wands/2.jpg');
+            &--back {
+                background-image: url('/assets/img/Wands/2.jpg');
+            }
+        }
+        &--3Wands {
+            background-image: linear-gradient(to right bottom,
+                $color-tertiary-light, $color-tertiary-dark),
+                url('/assets/img/Wands/3.jpg');
+            &--back {
+                background-image: url('/assets/img/Wands/3.jpg');
+            }
+        }
+        &--4Wands{
+            background-image: linear-gradient(to right bottom,
+                $color-four-light, $color-four-dark),
+                url('/assets/img/Wands/4.jpg');
+            &--back {
+                background-image: url('/assets/img/Wands/4.jpg');
+            }
+        }
+        &--5Wands {
+            background-image: linear-gradient(to right bottom,
+                $color-primary-light, $color-primary-dark),
+                url('/assets/img/Wands/5.jpg');
+            &--back {
+                background-image: url('/assets/img/Wands/5.jpg');
+            }
+        }
+        &--6Wands {
+            background-image: linear-gradient(to right bottom,
+                $color-secondary-light, $color-secondary-dark),
+                url('/assets/img/Wands/6.jpg');
+            &--back {
+                background-image: url('/assets/img/Wands/6.jpg');
+            }
+        }
+        &--7Wands {
+            background-image: linear-gradient(to right bottom,
+                $color-tertiary-light, $color-tertiary-dark),
+                url('/assets/img/Wands/7.jpg');
+            &--back {
+                background-image: url('/assets/img/Wands/7.jpg');
+            }
+        }
+        &--8Wands{
+            background-image: linear-gradient(to right bottom,
+                $color-four-light, $color-four-dark),
+                url('/assets/img/Wands/8.jpg');
+            &--back {
+                background-image: url('/assets/img/Wands/8.jpg');
+            }
+        }
+        &--9Wands {
+            background-image: linear-gradient(to right bottom,
+                $color-primary-light, $color-primary-dark),
+                url('/assets/img/Wands/9.jpg');
+            &--back {
+                background-image: url('/assets/img/Wands/9.jpg');
+            }
+        }
+        &--10Wands {
+            background-image: linear-gradient(to right bottom,
+                $color-secondary-light, $color-secondary-dark),
+                url('/assets/img/Wands/10.jpg');
+            &--back {
+                background-image: url('/assets/img/Wands/10.jpg');
+            }
+        }
+        &--11Wands {
+            background-image: linear-gradient(to right bottom,
+                $color-tertiary-light, $color-tertiary-dark),
+                url('/assets/img/Wands/11.jpg');
+            &--back {
+                background-image: url('/assets/img/Wands/11.jpg');
+            }
+        }
+        &--12Wands{
+            background-image: linear-gradient(to right bottom,
+                $color-four-light, $color-four-dark),
+                url('/assets/img/Wands/12.jpg');
+            &--back {
+                background-image: url('/assets/img/Wands/12.jpg');
+            }
+        }
+        &--13Wands {
+            background-image: linear-gradient(to right bottom,
+                $color-primary-light, $color-primary-dark),
+                url('/assets/img/Wands/13.jpg');
+            &--back {
+                background-image: url('/assets/img/Wands/13.jpg');
+            }
+        }
+        &--14Wands {
+            background-image: linear-gradient(to right bottom,
+                $color-secondary-light, $color-secondary-dark),
+                url('/assets/img/Wands/14.jpg');
+            &--back {
+                background-image: url('/assets/img/Wands/14.jpg');
+            }
+        }
+        &--AceCups {
+            background-image: linear-gradient(to right bottom,
+                $color-primary-light, $color-primary-dark),
+                url('/assets/img/Cups/1.jpg');
+            &--back {
+                background-image: url('/assets/img/Cups/1.jpg');
+            }
+        }
+        &--2Cups {
+            background-image: linear-gradient(to right bottom,
+                $color-secondary-light, $color-secondary-dark),
+                url('/assets/img/Cups/2.jpg');
+            &--back {
+                background-image: url('/assets/img/Cups/2.jpg');
+            }
+        }
+        &--3Cups {
+            background-image: linear-gradient(to right bottom,
+                $color-tertiary-light, $color-tertiary-dark),
+                url('/assets/img/Cups/3.jpg');
+            &--back {
+                background-image: url('/assets/img/Cups/3.jpg');
+            }
+        }
+        &--4Cups{
+            background-image: linear-gradient(to right bottom,
+                $color-four-light, $color-four-dark),
+                url('/assets/img/Cups/4.jpg');
+            &--back {
+                background-image: url('/assets/img/Cups/4.jpg');
+            }
+        }
+        &--5Cups {
+            background-image: linear-gradient(to right bottom,
+                $color-primary-light, $color-primary-dark),
+                url('/assets/img/Cups/5.jpg');
+            &--back {
+                background-image: url('/assets/img/Cups/5.jpg');
+            }
+        }
+        &--6Cups {
+            background-image: linear-gradient(to right bottom,
+                $color-secondary-light, $color-secondary-dark),
+                url('/assets/img/Cups/6.jpg');
+            &--back {
+                background-image: url('/assets/img/Cups/6.jpg');
+            }
+        }
+        &--7Cups {
+            background-image: linear-gradient(to right bottom,
+                $color-tertiary-light, $color-tertiary-dark),
+                url('/assets/img/Cups/7.jpg');
+            &--back {
+                background-image: url('/assets/img/Cups/7.jpg');
+            }
+        }
+        &--8Cups{
+            background-image: linear-gradient(to right bottom,
+                $color-four-light, $color-four-dark),
+                url('/assets/img/Cups/8.jpg');
+            &--back {
+                background-image: url('/assets/img/Cups/8.jpg');
+            }
+        }
+        &--9Cups {
+            background-image: linear-gradient(to right bottom,
+                $color-primary-light, $color-primary-dark),
+                url('/assets/img/Cups/9.jpg');
+            &--back {
+                background-image: url('/assets/img/Cups/9.jpg');
+            }
+        }
+        &--10Cups {
+            background-image: linear-gradient(to right bottom,
+                $color-secondary-light, $color-secondary-dark),
+                url('/assets/img/Cups/10.jpg');
+            &--back {
+                background-image: url('/assets/img/Cups/10.jpg');
+            }
+        }
+        &--11Cups {
+            background-image: linear-gradient(to right bottom,
+                $color-tertiary-light, $color-tertiary-dark),
+                url('/assets/img/Cups/11.jpg');
+            &--back {
+                background-image: url('/assets/img/Cups/11.jpg');
+            }
+        }
+        &--12Cups{
+            background-image: linear-gradient(to right bottom,
+                $color-four-light, $color-four-dark),
+                url('/assets/img/Cups/12.jpg');
+            &--back {
+                background-image: url('/assets/img/Cups/12.jpg');
+            }
+        }
+        &--13Cups {
+            background-image: linear-gradient(to right bottom,
+                $color-primary-light, $color-primary-dark),
+                url('/assets/img/Cups/13.jpg');
+            &--back {
+                background-image: url('/assets/img/Cups/13.jpg');
+            }
+        }
+        &--14Cups {
+            background-image: linear-gradient(to right bottom,
+                $color-secondary-light, $color-secondary-dark),
+                url('/assets/img/Cups/14.jpg');
+            &--back {
+                background-image: url('/assets/img/Cups/14.jpg');
+            }
+        }
+        &--AceSwords {
+            background-image: linear-gradient(to right bottom,
+                $color-primary-light, $color-primary-dark),
+                url('/assets/img/Swords/1.jpg');
+            &--back {
+                background-image: url('/assets/img/Swords/1.jpg');
+            }
+        }
+        &--2Swords {
+            background-image: linear-gradient(to right bottom,
+                $color-secondary-light, $color-secondary-dark),
+                url('/assets/img/Swords/2.jpg');
+            &--back {
+                background-image: url('/assets/img/Swords/2.jpg');
+            }
+        }
+        &--3Swords {
+            background-image: linear-gradient(to right bottom,
+                $color-tertiary-light, $color-tertiary-dark),
+                url('/assets/img/Swords/3.jpg');
+            &--back {
+                background-image: url('/assets/img/Swords/3.jpg');
+            }
+        }
+        &--4Swords{
+            background-image: linear-gradient(to right bottom,
+                $color-four-light, $color-four-dark),
+                url('/assets/img/Swords/4.jpg');
+            &--back {
+                background-image: url('/assets/img/Swords/4.jpg');
+            }
+        }
+        &--5Swords {
+            background-image: linear-gradient(to right bottom,
+                $color-primary-light, $color-primary-dark),
+                url('/assets/img/Swords/5.jpg');
+            &--back {
+                background-image: url('/assets/img/Swords/5.jpg');
+            }
+        }
+        &--6Swords {
+            background-image: linear-gradient(to right bottom,
+                $color-secondary-light, $color-secondary-dark),
+                url('/assets/img/Swords/6.jpg');
+            &--back {
+                background-image: url('/assets/img/Swords/6.jpg');
+            }
+        }
+        &--7Swords {
+            background-image: linear-gradient(to right bottom,
+                $color-tertiary-light, $color-tertiary-dark),
+                url('/assets/img/Swords/7.jpg');
+            &--back {
+                background-image: url('/assets/img/Swords/7.jpg');
+            }
+        }
+        &--8Swords{
+            background-image: linear-gradient(to right bottom,
+                $color-four-light, $color-four-dark),
+                url('/assets/img/Swords/8.jpg');
+            &--back {
+                background-image: url('/assets/img/Swords/8.jpg');
+            }
+        }
+        &--9Swords {
+            background-image: linear-gradient(to right bottom,
+                $color-primary-light, $color-primary-dark),
+                url('/assets/img/Swords/9.jpg');
+            &--back {
+                background-image: url('/assets/img/Swords/9.jpg');
+            }
+        }
+        &--10Swords {
+            background-image: linear-gradient(to right bottom,
+                $color-secondary-light, $color-secondary-dark),
+                url('/assets/img/Swords/10.jpg');
+            &--back {
+                background-image: url('/assets/img/Swords/10.jpg');
+            }
+        }
+        &--11Swords {
+            background-image: linear-gradient(to right bottom,
+                $color-tertiary-light, $color-tertiary-dark),
+                url('/assets/img/Swords/11.jpg');
+            &--back {
+                background-image: url('/assets/img/Swords/11.jpg');
+            }
+        }
+        &--12Swords{
+            background-image: linear-gradient(to right bottom,
+                $color-four-light, $color-four-dark),
+                url('/assets/img/Swords/12.jpg');
+            &--back {
+                background-image: url('/assets/img/Swords/12.jpg');
+            }
+        }
+        &--13Swords {
+            background-image: linear-gradient(to right bottom,
+                $color-primary-light, $color-primary-dark),
+                url('/assets/img/Swords/13.jpg');
+            &--back {
+                background-image: url('/assets/img/Swords/13.jpg');
+            }
+        }
+        &--14Swords {
+            background-image: linear-gradient(to right bottom,
+                $color-secondary-light, $color-secondary-dark),
+                url('/assets/img/Swords/14.jpg');
+            &--back {
+                background-image: url('/assets/img/Swords/14.jpg');
+            }
+        }
+
+        &--AcePentacles {
+            background-image: linear-gradient(to right bottom,
+                $color-primary-light, $color-primary-dark),
+                url('/assets/img/Pentacles/1.jpg');
+            &--back {
+                background-image: url('/assets/img/Pentacles/1.jpg');
+            }
+        }
+        &--2Pentacles {
+            background-image: linear-gradient(to right bottom,
+                $color-secondary-light, $color-secondary-dark),
+                url('/assets/img/Pentacles/2.jpg');
+            &--back {
+                background-image: url('/assets/img/Pentacles/2.jpg');
+            }
+        }
+        &--3Pentacles {
+            background-image: linear-gradient(to right bottom,
+                $color-tertiary-light, $color-tertiary-dark),
+                url('/assets/img/Pentacles/3.jpg');
+            &--back {
+                background-image: url('/assets/img/Pentacles/3.jpg');
+            }
+        }
+        &--4Pentacles{
+            background-image: linear-gradient(to right bottom,
+                $color-four-light, $color-four-dark),
+                url('/assets/img/Pentacles/4.jpg');
+            &--back {
+                background-image: url('/assets/img/Pentacles/4.jpg');
+            }
+        }
+        &--5Pentacles {
+            background-image: linear-gradient(to right bottom,
+                $color-primary-light, $color-primary-dark),
+                url('/assets/img/Pentacles/5.jpg');
+            &--back {
+                background-image: url('/assets/img/Pentacles/5.jpg');
+            }
+        }
+        &--6Pentacles {
+            background-image: linear-gradient(to right bottom,
+                $color-secondary-light, $color-secondary-dark),
+                url('/assets/img/Pentacles/6.jpg');
+            &--back {
+                background-image: url('/assets/img/Pentacles/6.jpg');
+            }
+        }
+        &--7Pentacles {
+            background-image: linear-gradient(to right bottom,
+                $color-tertiary-light, $color-tertiary-dark),
+                url('/assets/img/Pentacles/7.jpg');
+            &--back {
+                background-image: url('/assets/img/Pentacles/7.jpg');
+            }
+        }
+        &--8Pentacles{
+            background-image: linear-gradient(to right bottom,
+                $color-four-light, $color-four-dark),
+                url('/assets/img/Pentacles/8.jpg');
+            &--back {
+                background-image: url('/assets/img/Pentacles/8.jpg');
+            }
+        }
+        &--9Pentacles {
+            background-image: linear-gradient(to right bottom,
+                $color-primary-light, $color-primary-dark),
+                url('/assets/img/Pentacles/9.jpg');
+            &--back {
+                background-image: url('/assets/img/Pentacles/9.jpg');
+            }
+        }
+        &--10Pentacles {
+            background-image: linear-gradient(to right bottom,
+                $color-secondary-light, $color-secondary-dark),
+                url('/assets/img/Pentacles/10.jpg');
+            &--back {
+                background-image: url('/assets/img/Pentacles/10.jpg');
+            }
+        }
+        &--11Pentacles {
+            background-image: linear-gradient(to right bottom,
+                $color-tertiary-light, $color-tertiary-dark),
+                url('/assets/img/Pentacles/11.jpg');
+            &--back {
+                background-image: url('/assets/img/Pentacles/11.jpg');
+            }
+        }
+        &--12Pentacles{
+            background-image: linear-gradient(to right bottom,
+                $color-four-light, $color-four-dark),
+                url('/assets/img/Pentacles/12.jpg');
+            &--back {
+                background-image: url('/assets/img/Pentacles/12.jpg');
+            }
+        }
+        &--13Pentacles {
+            background-image: linear-gradient(to right bottom,
+                $color-primary-light, $color-primary-dark),
+                url('/assets/img/Pentacles/13.jpg');
+            &--back {
+                background-image: url('/assets/img/Pentacles/13.jpg');
+            }
+        }
+        &--14Pentacles {
+            background-image: linear-gradient(to right bottom,
+                $color-secondary-light, $color-secondary-dark),
+                url('/assets/img/Pentacles/14.jpg');
+            &--back {
+                background-image: url('/assets/img/Pentacles/14.jpg');
+            }
+        }
+
+
+
+
+    }
+
+    &__heading {
+        font-size: 2.8rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        text-align: right;
+        color: $color-white;
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        width: 90%;
+    }
+    &__heading-span {
+        padding: 1rem 1.5rem;
+        -webkit-box-decoration-break: clone;//let two item align right
+        box-decoration-break: clone;
+
+        &--1 {
+            background-image: linear-gradient(to right bottom,
+                rgba($color-primary-light, .85),
+                rgba($color-primary-dark, .85));
+        }
+        &--2 {
+            background-image: linear-gradient(to right bottom,
+                rgba($color-secondary-light, .85),
+                rgba($color-secondary-dark, .85));
+        }
+        &--3 {
+            background-image: linear-gradient(to right bottom,
+                rgba($color-tertiary-light, .85),
+                rgba($color-tertiary-dark, .85));
+        }
+        &--4 {
+            background-image: linear-gradient(to right bottom,
+                rgba($color-four-light, .85),
+                rgba($color-four-dark, .85));
+        }
+    }
+
+    &__details {
+        padding: 3rem;
+        ul {
+            list-style: none;
+            width: 80%;
+            margin: 0 auto;
+            li {
+                text-align: center;
+                font-size: 1.5rem;
+                padding: 1rem;
+                &:not(:last-child) {
+                    border-bottom: 1px solid $color-grey-dark;
+                }
+            }
+        }
+    }
+
+    &__cta {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        text-align: center;
+    }
+
+    &__price-box {
+        text-align: center;
+        color: $color-white;
+        margin-bottom: 8rem;
+    }
+
+    &__price-only {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+    }
+
+    &__price-value {
+        font-size: 6rem;
+        font-weight: 100;
+    }
+}

@@ -1,0 +1,755 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box; }
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  80% {
+    transform: translateY(-0.5rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem; }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 6rem; }
+  .heading-primary--main {
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation: moveInLeft 1s ease-out; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    animation: moveInRight 1s ease-out; }
+
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(to right, #f5ccff, #8f00b3);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 2px;
+  transition: all .2s; }
+  .heading-secondary:hover {
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: 0.5rem 0.1rem 2rem rgba(0, 0, 0, 0.2); }
+
+.heading-tertiary {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.paragraphe {
+  font-size: 1.8rem; }
+  .paragraphe:not(last-child) {
+    margin-bottom: 3rem; }
+
+.u-center-text {
+  text-align: center; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem; }
+
+.u-margin-top-big {
+  margin-bottom: 8rem; }
+
+.u-margin-top-huge {
+  margin-bottom: 10rem; }
+
+.btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all .2s;
+  position: relative;
+  font-size: 1.8rem; }
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+.btn-animiated {
+  animation: moveInBottom .5s ease-out .75s;
+  animation-fill-mode: backwards; }
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s; }
+
+.btn--white {
+  background-color: #fff;
+  color: #777; }
+  .btn--white::after {
+    background-color: #fff; }
+
+.btn--green {
+  background-color: #d11aff;
+  color: #fff; }
+  .btn--green::after {
+    background-color: #d11aff; }
+
+.btn-text:link, .btn-text:visited {
+  font-size: 1.8rem;
+  color: #d11aff;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px solid #d11aff;
+  padding: 3px;
+  transition: all .2s; }
+
+.btn-text:hover {
+  background-color: #d11aff;
+  color: #fff;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px); }
+
+.btn-text:active {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  transform: translateY(0); }
+
+.composition {
+  position: relative; }
+  .composition__photo {
+    width: 55%;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+    border-radius: 2px;
+    position: absolute;
+    z-index: 10;
+    transition: all .2s;
+    outline-offset: 2rem; }
+    .composition__photo--p1 {
+      left: 0;
+      top: -2rem; }
+    .composition__photo--p2 {
+      right: 0;
+      top: 2rem; }
+    .composition__photo--p3 {
+      left: 20%;
+      top: 10rem; }
+    .composition__photo:hover {
+      outline: 1rem solid #d11aff;
+      transform: scale(1.15) translateY(-0.5rem);
+      box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+      z-index: 20; }
+  .composition:hover .composition__photo:not(:hover) {
+    transform: scale(0.95); }
+
+.card {
+  perspective: 100rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 60rem; }
+  .card__side {
+    font-size: 2rem;
+    height: 50rem;
+    transition: all .8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+    .card__side--front {
+      background-color: #fff; }
+    .card__side--back {
+      transform: rotateY(180deg); }
+      .card__side--back-1 {
+        background-image: linear-gradient(to right bottom, #f5ccff, #8f00b3); }
+      .card__side--back-2 {
+        background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
+      .card__side--back-3 {
+        background-image: linear-gradient(to right bottom, #ccf5ff, #00b8e6); }
+      .card__side--back-4 {
+        background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+  .card:hover .card__side--front {
+    transform: rotateY(-180deg); }
+  .card:hover .card__side--back {
+    transform: rotateY(0); }
+  .card__picture {
+    background-size: cover;
+    height: 50rem;
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px; }
+    .card__picture--Fool {
+      background-image: linear-gradient(to right bottom, #f5ccff, #8f00b3), url("/assets/img/Fool.jpg"); }
+      .card__picture--Fool--back {
+        background-image: url("/assets/img/Fool.jpg"); }
+    .card__picture--Magician {
+      background-image: linear-gradient(to right bottom, #7ed56f, #ff7730), url("/assets/img/Magician.jpg"); }
+      .card__picture--Magician--back {
+        background-image: url("/assets/img/Magician.jpg"); }
+    .card__picture--Priestess {
+      background-image: linear-gradient(to right bottom, #7ed56f, #00b8e6), url("/assets/img/Priestess.jpg"); }
+      .card__picture--Priestess--back {
+        background-image: url("/assets/img/Priestess.jpg"); }
+    .card__picture--Empress {
+      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url("/assets/img/Empress.jpg"); }
+      .card__picture--Empress--back {
+        background-image: url("/assets/img/Empress.jpg"); }
+    .card__picture--Emperor {
+      background-image: linear-gradient(to right bottom, #f5ccff, #8f00b3), url("/assets/img/Emperor.jpg"); }
+      .card__picture--Emperor--back {
+        background-image: url("/assets/img/Emperor.jpg"); }
+    .card__picture--Hierophant {
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url("/assets/img/Hierophant.jpg"); }
+      .card__picture--Hierophant--back {
+        background-image: url("/assets/img/Hierophant.jpg"); }
+    .card__picture--Lovers {
+      background-image: linear-gradient(to right bottom, #ccf5ff, #00b8e6), url("/assets/img/Lovers.jpg"); }
+      .card__picture--Lovers--back {
+        background-image: url("/assets/img/Lovers.jpg"); }
+    .card__picture--Chariot {
+      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url("/assets/img/Chariot.jpg"); }
+      .card__picture--Chariot--back {
+        background-image: url("/assets/img/Chariot.jpg"); }
+    .card__picture--Strength {
+      background-image: linear-gradient(to right bottom, #f5ccff, #8f00b3), url("/assets/img/Strength.jpg"); }
+      .card__picture--Strength--back {
+        background-image: url("/assets/img/Strength.jpg"); }
+    .card__picture--Hermit {
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url("/assets/img/Hermit.jpg"); }
+      .card__picture--Hermit--back {
+        background-image: url("/assets/img/Hermit.jpg"); }
+    .card__picture--Wheel_of_Fortune {
+      background-image: linear-gradient(to right bottom, #ccf5ff, #00b8e6), url("/assets/img/Wheel_of_Fortune.jpg"); }
+      .card__picture--Wheel_of_Fortune--back {
+        background-image: url("/assets/img/Wheel_of_Fortune.jpg"); }
+    .card__picture--Justice {
+      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url("/assets/img/Justice.jpg"); }
+      .card__picture--Justice--back {
+        background-image: url("/assets/img/Justice.jpg"); }
+    .card__picture--HangedMan {
+      background-image: linear-gradient(to right bottom, #f5ccff, #8f00b3), url("/assets/img/HangedMan.jpg"); }
+      .card__picture--HangedMan--back {
+        background-image: url("/assets/img/HangedMan.jpg"); }
+    .card__picture--Death {
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url("/assets/img/Death.jpg"); }
+      .card__picture--Death--back {
+        background-image: url("/assets/img/Death.jpg"); }
+    .card__picture--Temperance {
+      background-image: linear-gradient(to right bottom, #ccf5ff, #00b8e6), url("/assets/img/Temperance.jpg"); }
+      .card__picture--Temperance--back {
+        background-image: url("/assets/img/Temperance.jpg"); }
+    .card__picture--Devil {
+      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url("/assets/img/Devil.jpg"); }
+      .card__picture--Devil--back {
+        background-image: url("/assets/img/Devil.jpg"); }
+    .card__picture--Tower {
+      background-image: linear-gradient(to right bottom, #f5ccff, #8f00b3), url("/assets/img/Tower.jpg"); }
+      .card__picture--Tower--back {
+        background-image: url("/assets/img/Tower.jpg"); }
+    .card__picture--Star {
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url("/assets/img/Star.jpg"); }
+      .card__picture--Star--back {
+        background-image: url("/assets/img/Star.jpg"); }
+    .card__picture--Moon {
+      background-image: linear-gradient(to right bottom, #ccf5ff, #00b8e6), url("/assets/img/Moon.jpg"); }
+      .card__picture--Moon--back {
+        background-image: url("/assets/img/Moon.jpg"); }
+    .card__picture--Sun {
+      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url("/assets/img/Sun.jpg"); }
+      .card__picture--Sun--back {
+        background-image: url("/assets/img/Sun.jpg"); }
+    .card__picture--Judgement {
+      background-image: linear-gradient(to right bottom, #f5ccff, #8f00b3), url("/assets/img/Judgement.jpg"); }
+      .card__picture--Judgement--back {
+        background-image: url("/assets/img/Judgement.jpg"); }
+    .card__picture--World {
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url("/assets/img/World.jpg"); }
+      .card__picture--World--back {
+        background-image: url("/assets/img/World.jpg"); }
+    .card__picture--AceWands {
+      background-image: linear-gradient(to right bottom, #f5ccff, #8f00b3), url("/assets/img/Wands/1.jpg"); }
+      .card__picture--AceWands--back {
+        background-image: url("/assets/img/Wands/1.jpg"); }
+    .card__picture--2Wands {
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url("/assets/img/Wands/2.jpg"); }
+      .card__picture--2Wands--back {
+        background-image: url("/assets/img/Wands/2.jpg"); }
+    .card__picture--3Wands {
+      background-image: linear-gradient(to right bottom, #ccf5ff, #00b8e6), url("/assets/img/Wands/3.jpg"); }
+      .card__picture--3Wands--back {
+        background-image: url("/assets/img/Wands/3.jpg"); }
+    .card__picture--4Wands {
+      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url("/assets/img/Wands/4.jpg"); }
+      .card__picture--4Wands--back {
+        background-image: url("/assets/img/Wands/4.jpg"); }
+    .card__picture--5Wands {
+      background-image: linear-gradient(to right bottom, #f5ccff, #8f00b3), url("/assets/img/Wands/5.jpg"); }
+      .card__picture--5Wands--back {
+        background-image: url("/assets/img/Wands/5.jpg"); }
+    .card__picture--6Wands {
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url("/assets/img/Wands/6.jpg"); }
+      .card__picture--6Wands--back {
+        background-image: url("/assets/img/Wands/6.jpg"); }
+    .card__picture--7Wands {
+      background-image: linear-gradient(to right bottom, #ccf5ff, #00b8e6), url("/assets/img/Wands/7.jpg"); }
+      .card__picture--7Wands--back {
+        background-image: url("/assets/img/Wands/7.jpg"); }
+    .card__picture--8Wands {
+      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url("/assets/img/Wands/8.jpg"); }
+      .card__picture--8Wands--back {
+        background-image: url("/assets/img/Wands/8.jpg"); }
+    .card__picture--9Wands {
+      background-image: linear-gradient(to right bottom, #f5ccff, #8f00b3), url("/assets/img/Wands/9.jpg"); }
+      .card__picture--9Wands--back {
+        background-image: url("/assets/img/Wands/9.jpg"); }
+    .card__picture--10Wands {
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url("/assets/img/Wands/10.jpg"); }
+      .card__picture--10Wands--back {
+        background-image: url("/assets/img/Wands/10.jpg"); }
+    .card__picture--11Wands {
+      background-image: linear-gradient(to right bottom, #ccf5ff, #00b8e6), url("/assets/img/Wands/11.jpg"); }
+      .card__picture--11Wands--back {
+        background-image: url("/assets/img/Wands/11.jpg"); }
+    .card__picture--12Wands {
+      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url("/assets/img/Wands/12.jpg"); }
+      .card__picture--12Wands--back {
+        background-image: url("/assets/img/Wands/12.jpg"); }
+    .card__picture--13Wands {
+      background-image: linear-gradient(to right bottom, #f5ccff, #8f00b3), url("/assets/img/Wands/13.jpg"); }
+      .card__picture--13Wands--back {
+        background-image: url("/assets/img/Wands/13.jpg"); }
+    .card__picture--14Wands {
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url("/assets/img/Wands/14.jpg"); }
+      .card__picture--14Wands--back {
+        background-image: url("/assets/img/Wands/14.jpg"); }
+    .card__picture--AceCups {
+      background-image: linear-gradient(to right bottom, #f5ccff, #8f00b3), url("/assets/img/Cups/1.jpg"); }
+      .card__picture--AceCups--back {
+        background-image: url("/assets/img/Cups/1.jpg"); }
+    .card__picture--2Cups {
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url("/assets/img/Cups/2.jpg"); }
+      .card__picture--2Cups--back {
+        background-image: url("/assets/img/Cups/2.jpg"); }
+    .card__picture--3Cups {
+      background-image: linear-gradient(to right bottom, #ccf5ff, #00b8e6), url("/assets/img/Cups/3.jpg"); }
+      .card__picture--3Cups--back {
+        background-image: url("/assets/img/Cups/3.jpg"); }
+    .card__picture--4Cups {
+      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url("/assets/img/Cups/4.jpg"); }
+      .card__picture--4Cups--back {
+        background-image: url("/assets/img/Cups/4.jpg"); }
+    .card__picture--5Cups {
+      background-image: linear-gradient(to right bottom, #f5ccff, #8f00b3), url("/assets/img/Cups/5.jpg"); }
+      .card__picture--5Cups--back {
+        background-image: url("/assets/img/Cups/5.jpg"); }
+    .card__picture--6Cups {
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url("/assets/img/Cups/6.jpg"); }
+      .card__picture--6Cups--back {
+        background-image: url("/assets/img/Cups/6.jpg"); }
+    .card__picture--7Cups {
+      background-image: linear-gradient(to right bottom, #ccf5ff, #00b8e6), url("/assets/img/Cups/7.jpg"); }
+      .card__picture--7Cups--back {
+        background-image: url("/assets/img/Cups/7.jpg"); }
+    .card__picture--8Cups {
+      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url("/assets/img/Cups/8.jpg"); }
+      .card__picture--8Cups--back {
+        background-image: url("/assets/img/Cups/8.jpg"); }
+    .card__picture--9Cups {
+      background-image: linear-gradient(to right bottom, #f5ccff, #8f00b3), url("/assets/img/Cups/9.jpg"); }
+      .card__picture--9Cups--back {
+        background-image: url("/assets/img/Cups/9.jpg"); }
+    .card__picture--10Cups {
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url("/assets/img/Cups/10.jpg"); }
+      .card__picture--10Cups--back {
+        background-image: url("/assets/img/Cups/10.jpg"); }
+    .card__picture--11Cups {
+      background-image: linear-gradient(to right bottom, #ccf5ff, #00b8e6), url("/assets/img/Cups/11.jpg"); }
+      .card__picture--11Cups--back {
+        background-image: url("/assets/img/Cups/11.jpg"); }
+    .card__picture--12Cups {
+      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url("/assets/img/Cups/12.jpg"); }
+      .card__picture--12Cups--back {
+        background-image: url("/assets/img/Cups/12.jpg"); }
+    .card__picture--13Cups {
+      background-image: linear-gradient(to right bottom, #f5ccff, #8f00b3), url("/assets/img/Cups/13.jpg"); }
+      .card__picture--13Cups--back {
+        background-image: url("/assets/img/Cups/13.jpg"); }
+    .card__picture--14Cups {
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url("/assets/img/Cups/14.jpg"); }
+      .card__picture--14Cups--back {
+        background-image: url("/assets/img/Cups/14.jpg"); }
+    .card__picture--AceSwords {
+      background-image: linear-gradient(to right bottom, #f5ccff, #8f00b3), url("/assets/img/Swords/1.jpg"); }
+      .card__picture--AceSwords--back {
+        background-image: url("/assets/img/Swords/1.jpg"); }
+    .card__picture--2Swords {
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url("/assets/img/Swords/2.jpg"); }
+      .card__picture--2Swords--back {
+        background-image: url("/assets/img/Swords/2.jpg"); }
+    .card__picture--3Swords {
+      background-image: linear-gradient(to right bottom, #ccf5ff, #00b8e6), url("/assets/img/Swords/3.jpg"); }
+      .card__picture--3Swords--back {
+        background-image: url("/assets/img/Swords/3.jpg"); }
+    .card__picture--4Swords {
+      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url("/assets/img/Swords/4.jpg"); }
+      .card__picture--4Swords--back {
+        background-image: url("/assets/img/Swords/4.jpg"); }
+    .card__picture--5Swords {
+      background-image: linear-gradient(to right bottom, #f5ccff, #8f00b3), url("/assets/img/Swords/5.jpg"); }
+      .card__picture--5Swords--back {
+        background-image: url("/assets/img/Swords/5.jpg"); }
+    .card__picture--6Swords {
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url("/assets/img/Swords/6.jpg"); }
+      .card__picture--6Swords--back {
+        background-image: url("/assets/img/Swords/6.jpg"); }
+    .card__picture--7Swords {
+      background-image: linear-gradient(to right bottom, #ccf5ff, #00b8e6), url("/assets/img/Swords/7.jpg"); }
+      .card__picture--7Swords--back {
+        background-image: url("/assets/img/Swords/7.jpg"); }
+    .card__picture--8Swords {
+      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url("/assets/img/Swords/8.jpg"); }
+      .card__picture--8Swords--back {
+        background-image: url("/assets/img/Swords/8.jpg"); }
+    .card__picture--9Swords {
+      background-image: linear-gradient(to right bottom, #f5ccff, #8f00b3), url("/assets/img/Swords/9.jpg"); }
+      .card__picture--9Swords--back {
+        background-image: url("/assets/img/Swords/9.jpg"); }
+    .card__picture--10Swords {
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url("/assets/img/Swords/10.jpg"); }
+      .card__picture--10Swords--back {
+        background-image: url("/assets/img/Swords/10.jpg"); }
+    .card__picture--11Swords {
+      background-image: linear-gradient(to right bottom, #ccf5ff, #00b8e6), url("/assets/img/Swords/11.jpg"); }
+      .card__picture--11Swords--back {
+        background-image: url("/assets/img/Swords/11.jpg"); }
+    .card__picture--12Swords {
+      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url("/assets/img/Swords/12.jpg"); }
+      .card__picture--12Swords--back {
+        background-image: url("/assets/img/Swords/12.jpg"); }
+    .card__picture--13Swords {
+      background-image: linear-gradient(to right bottom, #f5ccff, #8f00b3), url("/assets/img/Swords/13.jpg"); }
+      .card__picture--13Swords--back {
+        background-image: url("/assets/img/Swords/13.jpg"); }
+    .card__picture--14Swords {
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url("/assets/img/Swords/14.jpg"); }
+      .card__picture--14Swords--back {
+        background-image: url("/assets/img/Swords/14.jpg"); }
+    .card__picture--AcePentacles {
+      background-image: linear-gradient(to right bottom, #f5ccff, #8f00b3), url("/assets/img/Pentacles/1.jpg"); }
+      .card__picture--AcePentacles--back {
+        background-image: url("/assets/img/Pentacles/1.jpg"); }
+    .card__picture--2Pentacles {
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url("/assets/img/Pentacles/2.jpg"); }
+      .card__picture--2Pentacles--back {
+        background-image: url("/assets/img/Pentacles/2.jpg"); }
+    .card__picture--3Pentacles {
+      background-image: linear-gradient(to right bottom, #ccf5ff, #00b8e6), url("/assets/img/Pentacles/3.jpg"); }
+      .card__picture--3Pentacles--back {
+        background-image: url("/assets/img/Pentacles/3.jpg"); }
+    .card__picture--4Pentacles {
+      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url("/assets/img/Pentacles/4.jpg"); }
+      .card__picture--4Pentacles--back {
+        background-image: url("/assets/img/Pentacles/4.jpg"); }
+    .card__picture--5Pentacles {
+      background-image: linear-gradient(to right bottom, #f5ccff, #8f00b3), url("/assets/img/Pentacles/5.jpg"); }
+      .card__picture--5Pentacles--back {
+        background-image: url("/assets/img/Pentacles/5.jpg"); }
+    .card__picture--6Pentacles {
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url("/assets/img/Pentacles/6.jpg"); }
+      .card__picture--6Pentacles--back {
+        background-image: url("/assets/img/Pentacles/6.jpg"); }
+    .card__picture--7Pentacles {
+      background-image: linear-gradient(to right bottom, #ccf5ff, #00b8e6), url("/assets/img/Pentacles/7.jpg"); }
+      .card__picture--7Pentacles--back {
+        background-image: url("/assets/img/Pentacles/7.jpg"); }
+    .card__picture--8Pentacles {
+      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url("/assets/img/Pentacles/8.jpg"); }
+      .card__picture--8Pentacles--back {
+        background-image: url("/assets/img/Pentacles/8.jpg"); }
+    .card__picture--9Pentacles {
+      background-image: linear-gradient(to right bottom, #f5ccff, #8f00b3), url("/assets/img/Pentacles/9.jpg"); }
+      .card__picture--9Pentacles--back {
+        background-image: url("/assets/img/Pentacles/9.jpg"); }
+    .card__picture--10Pentacles {
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url("/assets/img/Pentacles/10.jpg"); }
+      .card__picture--10Pentacles--back {
+        background-image: url("/assets/img/Pentacles/10.jpg"); }
+    .card__picture--11Pentacles {
+      background-image: linear-gradient(to right bottom, #ccf5ff, #00b8e6), url("/assets/img/Pentacles/11.jpg"); }
+      .card__picture--11Pentacles--back {
+        background-image: url("/assets/img/Pentacles/11.jpg"); }
+    .card__picture--12Pentacles {
+      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url("/assets/img/Pentacles/12.jpg"); }
+      .card__picture--12Pentacles--back {
+        background-image: url("/assets/img/Pentacles/12.jpg"); }
+    .card__picture--13Pentacles {
+      background-image: linear-gradient(to right bottom, #f5ccff, #8f00b3), url("/assets/img/Pentacles/13.jpg"); }
+      .card__picture--13Pentacles--back {
+        background-image: url("/assets/img/Pentacles/13.jpg"); }
+    .card__picture--14Pentacles {
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url("/assets/img/Pentacles/14.jpg"); }
+      .card__picture--14Pentacles--back {
+        background-image: url("/assets/img/Pentacles/14.jpg"); }
+  .card__heading {
+    font-size: 2.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: right;
+    color: #fff;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 90%; }
+  .card__heading-span {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone; }
+    .card__heading-span--1 {
+      background-image: linear-gradient(to right bottom, rgba(245, 204, 255, 0.85), rgba(143, 0, 179, 0.85)); }
+    .card__heading-span--2 {
+      background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85)); }
+    .card__heading-span--3 {
+      background-image: linear-gradient(to right bottom, rgba(204, 245, 255, 0.85), rgba(0, 184, 230, 0.85)); }
+    .card__heading-span--4 {
+      background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.85), rgba(40, 180, 133, 0.85)); }
+  .card__details {
+    padding: 3rem; }
+    .card__details ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto; }
+      .card__details ul li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem; }
+        .card__details ul li:not(:last-child) {
+          border-bottom: 1px solid #777; }
+  .card__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center; }
+  .card__price-box {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 8rem; }
+  .card__price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase; }
+  .card__price-value {
+    font-size: 6rem;
+    font-weight: 100; }
+
+.feature-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  transition: transform .3s; }
+  .feature-box__icon {
+    font-size: 6rem;
+    margin-bottom: .5rem;
+    display: inline-block;
+    background-image: linear-gradient(to right, #f5ccff, #8f00b3);
+    -webkit-background-clip: text;
+    color: transparent; }
+  .feature-box:hover {
+    transform: translateY(-1.5rem) scale(1.03); }
+
+.popup {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s; }
+  .popup__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    background-color: #fff;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    display: table;
+    overflow: hidden;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.25);
+    transition: all .5s .2s; }
+  .popup__left {
+    width: 33.333333%;
+    display: table-cell; }
+  .popup__right {
+    width: 66.666667%;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 3rem 5rem; }
+  .popup__img {
+    display: block;
+    width: 100%; }
+  .popup__text {
+    font-size: 1.4rem;
+    margin-bottom: 4rem;
+    -moz-column-count: 2;
+    -moz-column-gap: 4rem;
+    -moz-column-rule: 1px solid #eee;
+    column-count: 2;
+    column-gap: 4rem;
+    column-rule: 1px solid #eee;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto; }
+  .popup:target {
+    opacity: 1;
+    visibility: visible; }
+  .popup:target .popup__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1); }
+  .popup__close:link, .popup__close:visited {
+    color: #777;
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+    font-size: 3rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: all .2s;
+    line-height: 1; }
+  .popup__close:hover {
+    color: #d11aff; }
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(245, 204, 255, 0.3), rgba(143, 0, 179, 0.3)), url("/assets/img/main/cover.jpg");
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+
+.row {
+  max-width: 160rem;
+  margin: 0 auto;
+  margin-left: 10vh;
+  margin-right: 10vh; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^='col-'] {
+    float: left; }
+    .row [class^='col-']:not(:last-child) {
+      margin-right: 6rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 6rem) / 3); }
+  .row .col-2-of-3 {
+    width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 6rem) / 4); }
+  .row .col-3-of-4 {
+    width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); }
+
+.section-about {
+  background-color: #f7f7f7;
+  padding: 25rem 0;
+  margin-top: -20vh; }
+
+.section-features {
+  padding: 20rem 0rem 20rem 0rem;
+  background-image: linear-gradient(to right bottom, rgba(245, 204, 255, 0.5), rgba(143, 0, 179, 0.5)), url("../img/main/feature.jpeg");
+  background-size: cover;
+  transform: skewY(-7deg);
+  margin-top: -10rem; }
+  .section-features > * {
+    transform: skewY(7deg); }
+
+.section-tarots {
+  background-color: #f7f7f7;
+  padding: 25rem 0 15rem 0;
+  margin-top: -20rem; }

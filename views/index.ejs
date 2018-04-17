@@ -1,0 +1,65 @@
+<html ng-app = 'myApp'>
+    <head></head>
+    <link href ="/assets/css/style.css" type="text/css" rel="stylesheet"/>
+    <script src='https://code.jquery.com/jquery-1.11.3.min.js'/></script>
+    <script src = 'https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.js'>
+    </script>
+    <body ng-controller='MainController as vm'>
+        <header class='header'>
+            <div class = 'header__text-box'>
+                <h1 class ='heading-primary'>
+                    <span class = 'heading-primary--main'> TAROT</span>
+                    <span class = 'heading-primary--sub'> is what life's meaning</span>
+                </h1>
+                <a href = '#section-majors' class = 'btn btn--white btn-animiated'> MAJOR ARCANA</a>
+        </div>
+        </header>
+        <section class = 'section-features'>
+            <div class = 'row'>
+                    <div ng-repeat="(type, myCards) in vm.cards"  ng-if="type!='majors'" class = 'col-1-of-4' ng-click="vm.go_href(type)">
+                        <div class = 'feature-box'>
+                            <img src="/assets/img/main/{{type}}.jpg" width='50%'/>
+                            <h3 class = 'heading-tertiary u-margin-bottom-small'> {{type}} </h3>
+                        </div>
+                    </div>
+            </div>
+        </section>
+
+        <section class = 'section-tarots' ng-repeat = '(type, myCards) in vm.cards' id = 'section-{{type}}'>
+            <div class = 'u-center-text u-margin-bottom-big'>
+                <h2 class = 'heading-secondary'>
+                    {{type}}
+                </h2>
+            </div>
+            <div class = 'row' ng-repeat = 'k in vm.range(vm.get_rows(myCards)) track by $index'>
+                <div class = 'col-1-of-4' ng-repeat="card in myCards.slice(4*$index, 4*$index+4);">
+                    <div class = 'card'>
+                        <div class = 'card__side card__side--front'>
+                            <div class = 'card__picture card__picture--{{card.title}} '>
+                                &nbsp;
+                            </div>
+                            <h4 class = 'card__heading'>
+                                <span class = 'card__heading-span card__heading-span--{{$index + 1}}'>
+                                    {{card.name}}
+                                </span>
+                            </h4>
+                        </div>
+                        <div class = 'card__side card__side--back card__side--back-{{$index + 1}}'>
+                            <div class = 'card__picture card__picture--{{card.title}}--back'>
+                                &nbsp;
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class = 'u-center-text u-margin-top-huge'>
+                <a href='#' class='btn btn--green'>Back to Up</a>
+            </div>
+        </section>
+
+        <script>
+            var clientCards = <%- JSON.stringify(serverCards)%>;
+        </script>
+        <script src='/assets/js/tarot.js'></script>
+    </body>
+</html>
