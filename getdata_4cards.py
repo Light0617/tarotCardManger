@@ -35,6 +35,6 @@ for i in range(14):
     print '\t\t\t general: "'+ meanings[0]+'",'
     print '\t\t\t advice: "'+ meanings[-1]+'",'
     print "\t\t\t img: '/assets/img/" + types + "/"+ str(i+1) +".jpg',"
-    print "\t\t\t type: '"+ types[:-1] +"',"
+    print "\t\t\t type: '"+ types[0].upper() + types[1:] +"',"
     print "\t\t\t card_id: "+ str(i+1) +""
     print '\t\t},'
