@@ -39,8 +39,7 @@ for i in range(len(nums)):
         default_title = 'Wheel_of_Fortune'
     elif nums[i] == 'The High Priestess':
         default_title = 'Priestess'
-    else:
-        print "\t\t\t title: '" + default_title +"',"
+    print "\t\t\t title: '" + default_title +"',"
     print "\t\t\t name: '"+ nums[i] +"',"
     print '\t\t\t general: "'+ meanings[0]+'",'
     print '\t\t\t advice: "'+ meanings[-1]+'",'
