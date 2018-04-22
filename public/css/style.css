@@ -268,93 +268,93 @@ body {
     border-top-left-radius: 3px;
     border-top-right-radius: 3px; }
     .card__picture--Fool {
-      background-image: linear-gradient(to right bottom, #f5ccff, #8f00b3), url("/assets/img/Fool.jpg"); }
+      background-image: linear-gradient(to right bottom, #f5ccff, #8f00b3), url("/assets/img/Majors/Fool.jpg"); }
       .card__picture--Fool--back {
-        background-image: url("/assets/img/Fool.jpg"); }
+        background-image: url("/assets/img/Majors/Fool.jpg"); }
     .card__picture--Magician {
-      background-image: linear-gradient(to right bottom, #7ed56f, #ff7730), url("/assets/img/Magician.jpg"); }
+      background-image: linear-gradient(to right bottom, #7ed56f, #ff7730), url("/assets/img/Majors/Magician.jpg"); }
       .card__picture--Magician--back {
-        background-image: url("/assets/img/Magician.jpg"); }
+        background-image: url("/assets/img/Majors/Magician.jpg"); }
     .card__picture--Priestess {
-      background-image: linear-gradient(to right bottom, #7ed56f, #00b8e6), url("/assets/img/Priestess.jpg"); }
+      background-image: linear-gradient(to right bottom, #7ed56f, #00b8e6), url("/assets/img/Majors/Priestess.jpg"); }
       .card__picture--Priestess--back {
-        background-image: url("/assets/img/Priestess.jpg"); }
+        background-image: url("/assets/img/Majors/Priestess.jpg"); }
     .card__picture--Empress {
-      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url("/assets/img/Empress.jpg"); }
+      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url("/assets/img/Majors/Empress.jpg"); }
       .card__picture--Empress--back {
-        background-image: url("/assets/img/Empress.jpg"); }
+        background-image: url("/assets/img/Majors/Empress.jpg"); }
     .card__picture--Emperor {
-      background-image: linear-gradient(to right bottom, #f5ccff, #8f00b3), url("/assets/img/Emperor.jpg"); }
+      background-image: linear-gradient(to right bottom, #f5ccff, #8f00b3), url("/assets/img/Majors/Emperor.jpg"); }
       .card__picture--Emperor--back {
-        background-image: url("/assets/img/Emperor.jpg"); }
+        background-image: url("/assets/img/Majors/Emperor.jpg"); }
     .card__picture--Hierophant {
-      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url("/assets/img/Hierophant.jpg"); }
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url("/assets/img/Majors/Hierophant.jpg"); }
       .card__picture--Hierophant--back {
-        background-image: url("/assets/img/Hierophant.jpg"); }
+        background-image: url("/assets/img/Majors/Hierophant.jpg"); }
     .card__picture--Lovers {
-      background-image: linear-gradient(to right bottom, #ccf5ff, #00b8e6), url("/assets/img/Lovers.jpg"); }
+      background-image: linear-gradient(to right bottom, #ccf5ff, #00b8e6), url("/assets/img/Majors/Lovers.jpg"); }
       .card__picture--Lovers--back {
-        background-image: url("/assets/img/Lovers.jpg"); }
+        background-image: url("/assets/img/Majors/Lovers.jpg"); }
     .card__picture--Chariot {
-      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url("/assets/img/Chariot.jpg"); }
+      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url("/assets/img/Majors/Chariot.jpg"); }
       .card__picture--Chariot--back {
-        background-image: url("/assets/img/Chariot.jpg"); }
+        background-image: url("/assets/img/Majors/Chariot.jpg"); }
     .card__picture--Strength {
-      background-image: linear-gradient(to right bottom, #f5ccff, #8f00b3), url("/assets/img/Strength.jpg"); }
+      background-image: linear-gradient(to right bottom, #f5ccff, #8f00b3), url("/assets/img/Majors/Strength.jpg"); }
       .card__picture--Strength--back {
-        background-image: url("/assets/img/Strength.jpg"); }
+        background-image: url("/assets/img/Majors/Strength.jpg"); }
     .card__picture--Hermit {
-      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url("/assets/img/Hermit.jpg"); }
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url("/assets/img/Majors/Hermit.jpg"); }
       .card__picture--Hermit--back {
-        background-image: url("/assets/img/Hermit.jpg"); }
+        background-image: url("/assets/img/Majors/Hermit.jpg"); }
     .card__picture--Wheel_of_Fortune {
-      background-image: linear-gradient(to right bottom, #ccf5ff, #00b8e6), url("/assets/img/Wheel_of_Fortune.jpg"); }
+      background-image: linear-gradient(to right bottom, #ccf5ff, #00b8e6), url("/assets/img/Majors/Wheel_of_Fortune.jpg"); }
       .card__picture--Wheel_of_Fortune--back {
-        background-image: url("/assets/img/Wheel_of_Fortune.jpg"); }
+        background-image: url("/assets/img/Majors/Wheel_of_Fortune.jpg"); }
     .card__picture--Justice {
-      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url("/assets/img/Justice.jpg"); }
+      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url("/assets/img/Majors/Justice.jpg"); }
       .card__picture--Justice--back {
-        background-image: url("/assets/img/Justice.jpg"); }
+        background-image: url("/assets/img/Majors/Justice.jpg"); }
     .card__picture--HangedMan {
-      background-image: linear-gradient(to right bottom, #f5ccff, #8f00b3), url("/assets/img/HangedMan.jpg"); }
+      background-image: linear-gradient(to right bottom, #f5ccff, #8f00b3), url("/assets/img/Majors/HangedMan.jpg"); }
       .card__picture--HangedMan--back {
-        background-image: url("/assets/img/HangedMan.jpg"); }
+        background-image: url("/assets/img/Majors/HangedMan.jpg"); }
     .card__picture--Death {
-      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url("/assets/img/Death.jpg"); }
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url("/assets/img/Majors/Death.jpg"); }
       .card__picture--Death--back {
-        background-image: url("/assets/img/Death.jpg"); }
+        background-image: url("/assets/img/Majors/Death.jpg"); }
     .card__picture--Temperance {
-      background-image: linear-gradient(to right bottom, #ccf5ff, #00b8e6), url("/assets/img/Temperance.jpg"); }
+      background-image: linear-gradient(to right bottom, #ccf5ff, #00b8e6), url("/assets/img/Majors/Temperance.jpg"); }
       .card__picture--Temperance--back {
-        background-image: url("/assets/img/Temperance.jpg"); }
+        background-image: url("/assets/img/Majors/Temperance.jpg"); }
     .card__picture--Devil {
-      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url("/assets/img/Devil.jpg"); }
+      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url("/assets/img/Majors/Devil.jpg"); }
       .card__picture--Devil--back {
-        background-image: url("/assets/img/Devil.jpg"); }
+        background-image: url("/assets/img/Majors/Devil.jpg"); }
     .card__picture--Tower {
-      background-image: linear-gradient(to right bottom, #f5ccff, #8f00b3), url("/assets/img/Tower.jpg"); }
+      background-image: linear-gradient(to right bottom, #f5ccff, #8f00b3), url("/assets/img/Majors/Tower.jpg"); }
       .card__picture--Tower--back {
-        background-image: url("/assets/img/Tower.jpg"); }
+        background-image: url("/assets/img/Majors/Tower.jpg"); }
     .card__picture--Star {
-      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url("/assets/img/Star.jpg"); }
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url("/assets/img/Majors/Star.jpg"); }
       .card__picture--Star--back {
-        background-image: url("/assets/img/Star.jpg"); }
+        background-image: url("/assets/img/Majors/Star.jpg"); }
     .card__picture--Moon {
-      background-image: linear-gradient(to right bottom, #ccf5ff, #00b8e6), url("/assets/img/Moon.jpg"); }
+      background-image: linear-gradient(to right bottom, #ccf5ff, #00b8e6), url("/assets/img/Majors/Moon.jpg"); }
       .card__picture--Moon--back {
-        background-image: url("/assets/img/Moon.jpg"); }
+        background-image: url("/assets/img/Majors/Moon.jpg"); }
     .card__picture--Sun {
-      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url("/assets/img/Sun.jpg"); }
+      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url("/assets/img/Majors/Sun.jpg"); }
       .card__picture--Sun--back {
-        background-image: url("/assets/img/Sun.jpg"); }
+        background-image: url("/assets/img/Majors/Sun.jpg"); }
     .card__picture--Judgement {
-      background-image: linear-gradient(to right bottom, #f5ccff, #8f00b3), url("/assets/img/Judgement.jpg"); }
+      background-image: linear-gradient(to right bottom, #f5ccff, #8f00b3), url("/assets/img/Majors/Judgement.jpg"); }
       .card__picture--Judgement--back {
-        background-image: url("/assets/img/Judgement.jpg"); }
+        background-image: url("/assets/img/Majors/Judgement.jpg"); }
     .card__picture--World {
-      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url("/assets/img/World.jpg"); }
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url("/assets/img/Majors/World.jpg"); }
       .card__picture--World--back {
-        background-image: url("/assets/img/World.jpg"); }
+        background-image: url("/assets/img/Majors/World.jpg"); }
     .card__picture--AceWands {
       background-image: linear-gradient(to right bottom, #f5ccff, #8f00b3), url("/assets/img/Wands/1.jpg"); }
       .card__picture--AceWands--back {

@@ -11,7 +11,7 @@ module.exports = function(app){
                 advice: "The card in the Advice position suggests a course of action which will harmonize what you want with what is currently possible."
                         +"The Fool advises that you lighten up. Let yourself be spontaneous enough to stretch beyond the realm of logic. There is no advantage to be gained by thinking you possess the knowledge, power, or control to direct reality. Open and receive without question, instead of trying to manage what's happening right now. The Fool has no ambition to manipulate a specific outcome. Just be happy to be part of the whole."
                         +"Release any demands or expectations. Give your complete attention to events as they are occurring in the present moment.",
-                img: '/assets/img/Fool.jpg',
+                img: '/assets/img/Majors/.jpg',
                 type: 'Major',
                 card_id: 1
             },
@@ -47,7 +47,7 @@ module.exports = function(app){
                 name: 'The Emperor',
                 general: '../data/card_meaning/Emperor_genral',
                 advice: '../data/card_meaning/Emperor_advice',
-                img: '/assets/img/EmperorEmperor.jpg',
+                img: '/assets/img/Emperor.jpg',
                 type: 'Major',
                 card_id: 5
             },
@@ -74,7 +74,7 @@ module.exports = function(app){
                 name: 'The Chariot',
                 general: '../data/card_meaning/Chariot_genral',
                 advice: '../data/card_meaning/Chariot_advice',
-                img: '/assets/img/ChariotChariot.jpg',
+                img: '/assets/img/Chariot.jpg',
                 type: 'Major',
                 card_id: 8
             },
@@ -83,7 +83,7 @@ module.exports = function(app){
                 name: 'The Strength',
                 general: '../data/card_meaning/Strength_genral',
                 advice: '../data/card_meaning/Strength_advice',
-                img: '/assets/img/StrengthStrength.jpg',
+                img: '/assets/img/Strength.jpg',
                 type: 'Major',
                 card_id: 9
             },
