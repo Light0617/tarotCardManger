@@ -215,6 +215,8 @@ body {
   -moz-perspective: 150rem;
   position: relative;
   height: 50rem; }
+  .card__popup_negative {
+    transform: rotate(180deg); }
   .card__positive {
     transform: scale(1.05) translateY(-0.1rem);
     box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5); }
@@ -669,14 +671,16 @@ body {
     border-radius: 3px;
     display: table;
     overflow: hidden;
+    top: 50%;
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.25);
     transition: all .5s .2s; }
   .popup__left {
-    width: 33.333333%;
+    width: 20%;
+    vertical-align: middle;
     display: table-cell; }
   .popup__right {
-    width: 66.666667%;
+    width: 80%;
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem; }

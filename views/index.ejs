@@ -63,14 +63,37 @@
                 <a href='#' class='btn btn--purple'>Back to Up</a>
             </div>
         </section>
-
-        <!-- <section>
+        <section>
             <div class = 'u-center-text u-margin-top-huge'>
-                <h2>{{vm.positiveCards}}</h2>
-                <h2>{{vm.negativeCards}}</h2>
-                <a href='#' class='btn btn--green' ng-click = "onSubmit()">sumit</a>
+                <a href='#popup' class='btn btn--green'>sumit</a>
             </div>
-        </section> -->
+        </section>
+
+
+        <div class = 'popup' id = 'popup'>
+            <div class = 'popup__content'>
+                <a href='#section-tarots' class = 'popup__close'>
+                    &times;
+                </a>
+                <div ng-repeat = "card in vm.positiveCards.concat(vm.negativeCards)">
+                    <div class = 'popup__left'>
+                        <img src = '{{card.img}}'
+                            ng-class = "{'card__popup_positive' : $index < vm.positiveCards.length,
+                                         'card__popup_negative' : $index >= vm.positiveCards.length}">
+                    </div>
+                    <div class = 'popup__right'>
+                        <p class = 'popup__text'>
+                            {{$index < vm.positiveCards.length ? card.general : card.advice}}
+                        </p>
+                    </div>
+                </div>
+                <div class = 'u-center-text u-margin-top-huge'>
+                    <a href='#' class='btn btn--green' ng-click = "onSubmit()">Save</a>
+                </div>
+            </div>
+        </div>
+
+
         <script>
             var clientCards = <%- JSON.stringify(serverCards)%>;
         </script>

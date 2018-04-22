@@ -33,4 +33,7 @@ function ctrlFunc(){
         }
         return selectCount;
     }
+    this.onSubmit = function(){
+        alert(this.positiveCards);
+    }
 }

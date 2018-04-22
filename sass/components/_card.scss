@@ -5,6 +5,14 @@
     position: relative;
     height: 50rem;
 
+    &__popup_positive {
+
+    }
+
+    &__popup_negative {
+        transform: rotate(180deg)
+    }
+
     &__positive {
         transform: scale(1.05) translateY(-.1rem);
         box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
