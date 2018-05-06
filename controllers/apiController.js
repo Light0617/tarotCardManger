@@ -1,4 +1,5 @@
 var Tarots = require('../models/tarotModel');
+var Users = require('../models/userModel');
 var bodyParser = require('body-parser');
 var express = require('express');
 var app = express();
@@ -33,6 +34,40 @@ module.exports = function(app){
         });
     });
 
+    app.get('/api/tarots/login', (req, res) => {
+      res.render('login', {
+        result: 'Hey',
+        });
+    })
+    app.post('/api/tarots/login', function(req, res){
+        if(req.body.id) {
+            Users.findByIdAndUpdate(req.body.id, {
+                username: req.body.username,
+                password: req.body.password
+            }, function(err, todo){
+                if(err) throw err;
+                res.send('Fail');
+                res.render('login', {
+                    result: 'Fail',
+                });
+            });
+        }else{
+            //new creation
+            var newUser = ({
+                username: req.body.username,
+                password: req.body.password
+            });
+            Users.create(newUser, function(err, results){
+                res.send('Success');
+                res.render('login', {
+                    username: req.body.username,
+                    password: req.body.password,
+                    result: 'Success',
+                });
+            });
+        }
+    });
+
     app.get('/api/tarot/:uname', function(req, res){
         Tarots.find({name : req.params.uname},function(err, tarot){
             if(err) throw err;
@@ -40,29 +75,6 @@ module.exports = function(app){
         });
     });
 
-    app.post('/api/tarot', function(req, res){
-        if(req.body.id) {
-            Tarots.findByIdAndUpdate(req.body.id, {
-                todo: req.body.todo,
-                isDone: req.body.isDone,
-                hasAttachment: req.body.hasAttachment
-            }, function(err, todo){
-                if(err) throw err;
-                res.send('Success');
-            });
-        }else{
-            //new creation
-            var newTarot = tarots({
-                username: 'test',
-                todo: req.body.todo,
-                isDone: req.body.isDone,
-                hasAttachment: req.body.hasAttachment
-            });
-            newTarot.save(function(err) {
-                res.send('Success');
-            });
-        }
-    });
 
     app.delete('/api/tarot', function(req, res){
         Tarots.findByIdAndRemove(req.body.id, function(err){

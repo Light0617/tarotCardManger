@@ -105,12 +105,12 @@
                 </a>
                 <div class='auth-base'>
                     <img clss= 'auth-logo' src='/assets/img/Majors/Fool.jpg'>
-                    <div class = 'auth-form form' >
+                    <form class = 'auth-form' action="/api/tarots/login" novalidate method = 'post'>
                         <div class = 'auth-heading'>
                             <h1> {{sign}} for Tarot </h1>
                         </div>
                         <div class = 'auth-form-group'>
-                            <input id='id_login' name='login' type='text' placeholder='Username or e-mail' class = 'auth-input' value=''>
+                            <input id='id_username' name='username' type='text' placeholder='Username or e-mail' class = 'auth-input' value=''>
                         </div>
                         <div class = 'auth-form-group'>
                             <input id='id_password' name='password' type='password' placeholder='Password' class = 'auth-input' value=''>
@@ -120,7 +120,7 @@
                             <a href='/accounts/password/reset'> Forgot Password</a>
                             <a href='#popup__sign_up' class = 'auth-pull-right'> {{vm.signs[($index + 1) % 2]}}</a>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
