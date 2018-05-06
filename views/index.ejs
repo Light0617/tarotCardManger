@@ -6,13 +6,17 @@
     </script>
     <body ng-controller='MainController as vm'>
         <header class='header'>
+            <div class = 'header__member'>
+                <a href = '#popup__sign in' class = 'btn btn--white btn-animiated btn-member'> Sign in</a>
+                <a href = '#popup__sign up' class = 'btn btn--white btn-animiated btn-member'> Sign up</a>
+            </div>
             <div class = 'header__text-box'>
                 <h1 class ='heading-primary'>
                     <span class = 'heading-primary--main'> TAROT</span>
                     <span class = 'heading-primary--sub'> is what life's meaning</span>
                 </h1>
                 <a href = '#section-majors' class = 'btn btn--white btn-animiated'> MAJOR ARCANA</a>
-        </div>
+            </div>
         </header>
         <section class = 'section-features'>
             <div class = 'row'>
@@ -89,6 +93,34 @@
                 </div>
                 <div class = 'u-center-text u-margin-top-huge'>
                     <a href='#' class='btn btn--green' ng-click = "onSubmit()">Save</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class = 'popup' ng-repeat = 'sign in vm.signs'   id = 'popup__{{sign}}'>
+            <div class = 'auth-content'>
+                <a href='#section-tarots' class = 'popup__close'>
+                    &times;
+                </a>
+                <div class='auth-base'>
+                    <img clss= 'auth-logo' src='/assets/img/Majors/Fool.jpg'>
+                    <div class = 'auth-form form' >
+                        <div class = 'auth-heading'>
+                            <h1> {{sign}} for Tarot </h1>
+                        </div>
+                        <div class = 'auth-form-group'>
+                            <input id='id_login' name='login' type='text' placeholder='Username or e-mail' class = 'auth-input' value=''>
+                        </div>
+                        <div class = 'auth-form-group'>
+                            <input id='id_password' name='password' type='password' placeholder='Password' class = 'auth-input' value=''>
+                        </div>
+                        <button name='signin_btn' type='submit' class='auth-btn'>{{sign}}</button>
+                        <div class = 'auth-left-text'>
+                            <a href='/accounts/password/reset'> Forgot Password</a>
+                            <a href='#popup__sign_up' class = 'auth-pull-right'> {{vm.signs[($index + 1) % 2]}}</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
