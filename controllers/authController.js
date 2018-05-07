@@ -1,8 +1,7 @@
 var mongoose = require('mongoose');
 var jwt = require('jsonwebtoken');
-var crypto = require('crypto');
-
 var Schema = mongoose.Schema;
+
 
 var userSchema = new Schema({
     email: {
@@ -14,7 +13,6 @@ var userSchema = new Schema({
     hash: String,
     salt: String
 });
-
 
 userSchema.methods.setPassword = function(password){
     this.salt = crypto.randomBytes(16).toString('hex');
@@ -39,24 +37,23 @@ userSchema.methods.generateJwt = function() {
 };
 
 
-var Users = mongoose.model('Users', userSchema);
-
 module.exports.register = function(req, res) {
-    var user = new Users();
+    var user = new User();
 
     user.email = req.body.email;
 
     user.setPassword(req.body.password);
 
-    user.save(function(err) {
-        var token;
-        token = user.generateJwt();
-        res.status(200);
-        res.json({
-          "token" : token
-        });
-    });
     res.send('signUp');
+    // user.save(function(err) {
+    //     var token;
+    //     token = user.generateJwt();
+    //     res.status(200);
+    //     res.json({
+    //       "token" : token
+    //     });
+    // });
+    // res.send('signUp');
 };
 
 module.exports.hi = function(req, res){
@@ -87,6 +84,3 @@ module.exports.login = function(req, res) {
     })(req, res);
 
 };
-
-
-module.exports.Users = Users;

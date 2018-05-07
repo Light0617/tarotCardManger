@@ -7,8 +7,8 @@
     <body ng-controller='MainController as vm'>
         <header class='header'>
             <div class = 'header__member'>
-                <a href = '#popup__sign in' class = 'btn btn--white btn-animiated btn-member'> Sign in</a>
-                <a href = '#popup__sign up' class = 'btn btn--white btn-animiated btn-member'> Sign up</a>
+                <a href = '#popup__signIn' class = 'btn btn--white btn-animiated btn-member'> Sign in</a>
+                <a href = '#popup__signUp' class = 'btn btn--white btn-animiated btn-member'> Sign up</a>
             </div>
             <div class = 'header__text-box'>
                 <h1 class ='heading-primary'>
@@ -98,19 +98,19 @@
         </div>
 
 
-        <div class = 'popup' ng-repeat = 'sign in vm.signs'   id = 'popup__{{sign}}'>
+        <div class = 'popup' ng-repeat = 'sign in vm.signs'   id = 'popup__{{vm.signsAction[$index]}}'>
             <div class = 'auth-content'>
                 <a href='#section-tarots' class = 'popup__close'>
                     &times;
                 </a>
                 <div class='auth-base'>
                     <img clss= 'auth-logo' src='/assets/img/Majors/Fool.jpg'>
-                    <form class = 'auth-form' action="/api/tarots/login" novalidate method = 'post'>
+                    <form class = 'auth-form' action = "{{ '/api/tarots/' + vm.signsAction[$index]}}"  novalidate method = 'post'>
                         <div class = 'auth-heading'>
                             <h1> {{sign}} for Tarot </h1>
                         </div>
                         <div class = 'auth-form-group'>
-                            <input id='id_username' name='username' type='text' placeholder='Username or e-mail' class = 'auth-input' value=''>
+                            <input id='id_email' name='email' type='text' placeholder='e-mail' class = 'auth-input' value=''>
                         </div>
                         <div class = 'auth-form-group'>
                             <input id='id_password' name='password' type='password' placeholder='Password' class = 'auth-input' value=''>

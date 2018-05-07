@@ -1,8 +1,10 @@
 var app = angular.module('myApp', []);
 
+
 app.controller('MainController', ctrlFunc);
 function ctrlFunc(){
     this.signs  = ['sign up', 'sign in'];
+    this.signsAction = ['signUp', 'signIn'];
     this.positiveCards = [];
     this.negativeCards = [];
     this.cards = clientCards;
